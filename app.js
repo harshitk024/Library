@@ -46,20 +46,31 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 const myLibrary = []
 
-function Book(bookname,author,read,pages){
-    this.bookname = bookname
-    this.author = author
-    this.read = read
-    this.pages = pages
+// function Book(bookname,author,read,pages){
+//     this.bookname = bookname
+//     this.author = author
+//     this.read = read
+//     this.pages = pages
 
-    this.info = function(){
+//     this.info = function(){
+//         return `Book : ${this.bookname} , Author : ${this.author} , Read : ${this.read} , Pages : ${this.pages}`
+//     }
+// }
+
+class Book{
+
+    constructor(bookname,author,read,pages){
+        this.bookname = bookname
+        this.author = author
+        this.read = read
+        this.pages  = pages
+    }
+
+
+    info(){
         return `Book : ${this.bookname} , Author : ${this.author} , Read : ${this.read} , Pages : ${this.pages}`
     }
 }
-
-
-b = new Book("T","d",false,100)
-console.log(b.read)
 
 function addBookToLibrary(book){
     myLibrary.push(book)
